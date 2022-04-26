@@ -11,13 +11,19 @@ import {
 function MyNav() {
   return (
     <>
-      <Navbar expand="lg" variant="dark" bg="dark" className="navbar">
+      <Navbar
+        sticky="top"
+        expand="lg"
+        variant="dark"
+        bg="dark"
+        className="navbar">
         <Container>
           <Navbar.Brand>
             <span style={{ color: "#ec4c4c" }}>
               <FontAwesomeIcon icon={faCode} />
             </span>
-            &nbsp;&nbsp;&nbsp;Adam Goodrich
+            &nbsp;&nbsp;&nbsp;
+            <span style={{ color: "#4083ae" }}>Adam Goodrich</span>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

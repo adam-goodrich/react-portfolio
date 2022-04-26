@@ -43,12 +43,12 @@ function Profile() {
         </Row>
         <Row className="profile-content">
           <Col className="project-container" md={12} lg={6}>
-            <div data-aos="fade-right">
+            <div data-aos="fade-up-right">
               <Image src={oasis} fluid={true} className="project-image" />
             </div>
           </Col>
           <Col md={12} lg={6}>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up-left">
               <Card className="project-card">
                 <Card.Body>
                   <Card.Title className="project-card-title">
@@ -79,12 +79,12 @@ function Profile() {
         </Row>
         <Row className="profile-content">
           <Col className="project-container" md={12} lg={6}>
-            <div data-aos="fade-right">
+            <div data-aos="fade-up-right">
               <Image src={odessa} fluid={true} className="project-image" />
             </div>
           </Col>
           <Col md={12} lg={6}>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up-left">
               <Card className="project-card">
                 <Card.Body>
                   <Card.Title className="project-card-title">
@@ -113,12 +113,12 @@ function Profile() {
         </Row>
         <Row className="profile-content">
           <Col className="project-container" md={12} lg={6}>
-            <div data-aos="fade-right">
+            <div data-aos="fade-up-right">
               <Image src={pizza} fluid={true} className="project-image" />
             </div>
           </Col>
           <Col md={12} lg={6}>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up-left">
               <Card className="project-card">
                 <Card.Body>
                   <Card.Title className="project-card-title">
@@ -148,7 +148,7 @@ function Profile() {
         </Row>
         <Row className="home-content">
           <Col className="project-container">
-            <div data-aos="fade-right">
+            <div data-aos="fade-up-right">
               <h1>Hello</h1>
             </div>
           </Col>

@@ -217,12 +217,12 @@ body {
 }
 
 .project-image {
-  width: 100%;
-  min-width: 500px;
+  width: 600px;
   height: 100%;
+  margin: 0 auto;
   object-fit: cover;
   border: 2px solid #272525;
-  box-shadow: 5px 5px #696868;
+  box-shadow: 8px 5px #4083ae;
 }
 
 .project-card {
@@ -233,7 +233,7 @@ body {
   width: 110%;
   max-width: 800px;
   border: 2px solid #272525;
-  box-shadow: 5px 5px #696868;
+  box-shadow: 5px 6px #4083ae;
 }
 
 .project-card-title {
@@ -292,14 +292,32 @@ body {
   }
 
   .project-card {
-    margin: 50px auto;
+    margin: 50px auto 0;
     right: 0;
+    bottom: 160px;
     padding: 30px 30px;
     height: 100%;
     width: 100%;
     max-width: 800px;
     border: 2px solid #272525;
     box-shadow: 5px 5px #696868;
+  }
+
+  .project-image {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #272525;
+    box-shadow: 5px 5px #696868;
+  }
+
+  .profile-content {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
