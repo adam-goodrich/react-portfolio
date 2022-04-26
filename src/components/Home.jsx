@@ -4,6 +4,8 @@ import "../App.css";
 import Headshot from "../images/headshot.jpeg";
 import "animate.css/animate.css";
 import Typed from "typed.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const el = React.useRef(null);
@@ -15,9 +17,9 @@ function Home() {
       strings: [
         " ",
         "Web \nDeveloper",
-        "Collaborator",
         "Creative \nThinker",
         `Experienced \nProfessional`,
+        "Enthusiastic \nCollaborator",
       ],
       typeSpeed: 50,
       backSpeed: 50,

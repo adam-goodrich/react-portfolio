@@ -41,61 +41,75 @@ const Contact = () => {
     }
   };
 
+  const reset = () => {
+    setEmailSent(false);
+  };
+
   return (
-    <div className="contact-body">
+    <main className="contact-body">
       <Container>
         <Card className="contact-card animate__animated animate__fadeIn">
-          <Card.Body>
-            <Card.Title className="card-title">Contact Me</Card.Title>
-            <Form
-              id="contact-form"
-              noValidate
-              validated={validated}
-              onSubmit={handleSubmit}>
-              <Form.Group controlId="validationCustom01">
-                <Form.Label className="form-label">Name:</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Your Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="validationCustom02">
-                <Form.Label className="form-label">Email:</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="validationCustom03">
-                <Form.Label className="form-label">Message:</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows="3"
-                  placeholder="Please send me a message!"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                />
-              </Form.Group>
-              <Button type="submit" id="submit-btn">
-                Send Message
-              </Button>
+          {!emailSent ? (
+            <Card.Body>
+              <Card.Title className="card-title">Contact Me</Card.Title>
+              <Form
+                id="contact-form"
+                noValidate
+                validated={validated}
+                onSubmit={handleSubmit}>
+                <Form.Group controlId="validationCustom01">
+                  <Form.Label className="form-label">Name:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Your Name"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+                <Form.Group controlId="validationCustom02">
+                  <Form.Label className="form-label">Email:</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Your email address"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+                <Form.Group controlId="validationCustom03">
+                  <Form.Label className="form-label">Message:</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows="3"
+                    placeholder="Please send me a message!"
+                    name="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+                <Button type="submit" id="submit-btn">
+                  Send Message
+                </Button>
+              </Form>
+            </Card.Body>
+          ) : (
+            <Card.Body>
               <div className={emailSent ? "visible sent-span" : "invisible"}>
-                <p className="sent-message">
-                  Thank you for your message, I will be in touch soon!
-                </p>
+                <h1 className="sent-message">Thank you for your message.</h1>
+                <h2 className="sent-message">I will be in touch soon!</h2>
               </div>
-            </Form>
-          </Card.Body>
+              <Button onClick={reset} className="reset-btn">
+                Send Another Message
+              </Button>
+            </Card.Body>
+          )}
         </Card>
       </Container>
-    </div>
+    </main>
   );
 };
 
