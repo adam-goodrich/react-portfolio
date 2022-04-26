@@ -15,6 +15,7 @@ function Home() {
       strings: [
         " ",
         "Web \nDeveloper",
+        "Problem \nSolver",
         "Creative \nThinker",
         `Experienced \nProfessional`,
         "Enthusiastic \nCollaborator",
@@ -50,7 +51,6 @@ function Home() {
           <Col className="headshot-container">
             <Image
               fluid={true}
-              roundedCircle={true}
               src={Headshot}
               alt="my headshot"
               className="headshot animate__animated animate__fadeInLeft "

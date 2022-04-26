@@ -5,7 +5,11 @@ import pizza from "../images/pizza.png";
 import "animate.css/animate.min.css";
 import { Container, Row, Col, Image, Card, Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHand, faHandPointDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHand,
+  faHandPointDown,
+  faGithub,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Profile() {
   return (
@@ -31,7 +35,14 @@ function Profile() {
               <p className="center-text">
                 Please take a look at my{" "}
                 <span style={{ color: "#ec4c4c" }}>work below</span> or feel
-                free to get in touch with me via the contact form on the site.
+                free to get in touch with me via the contact form on the site or
+                @{" "}
+                <a
+                  href="mailto:agoodrich57@gmail.com"
+                  style={{ color: "#ec4c4c" }}>
+                  agoodrich57@gmail.com
+                </a>
+                .
               </p>
               <div className="hand-container">
                 <h1 className="animate__animated animate__bounce animate__infinite">
@@ -55,17 +66,32 @@ function Profile() {
                     Oasis Vegan Veggie Parlor
                   </Card.Title>
                   <Card.Text>
+                    Oasis Vegan Veggie Parlor is a static website built for a
+                    Boston vegan restaurant. This site has a simple and clean
+                    design, and is fully responsive. The site has already
+                    generated over 500 contact form submissions generating
+                    thousands in revenue.
+                  </Card.Text>
+                  <Card.Text>
                     <a
                       href="https://www.oasisveganveggieparlor.com/"
                       target="_blank"
-                      rel="noreferrer">
-                      Oasis Vegan Veggie Parlor
-                    </a>{" "}
-                    is a static website built for a Boston vegan restaurant.
-                    This site has a simple and clean design, and is fully
-                    responsive. The site has already generated over 500 contact
-                    form submissions generating thousands in revenue.
+                      rel="noreferrer"
+                      className="github-link">
+                      {" "}
+                      View Website
+                    </a>
                   </Card.Text>
+                  <Card.Text>
+                    <a
+                      href="https://github.com/adam-goodrich/oasis"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="github-link">
+                      View On Github
+                    </a>
+                  </Card.Text>
+
                   <Card.Text>
                     <Badge variant="secondary">HTML5</Badge>&nbsp;
                     <Badge variant="secondary">CSS3</Badge>&nbsp;
@@ -95,8 +121,17 @@ function Profile() {
                     pediatric health leveraging school as an anchor for the
                     next-generation of care. This app tracks students moods and
                     energy levels through fun and interactive quizzes. Teachers
-                    then get a dashboard to track student moods and provide
-                    feedback.
+                    then get a dashboard to view student mood history and
+                    provide feedback.
+                  </Card.Text>
+                  <Card.Text>
+                    <a
+                      href="https://www.odessa.care/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="github-link">
+                      View Website
+                    </a>
                   </Card.Text>
                   <Card.Text>
                     <Badge variant="secondary">TypeScript</Badge>&nbsp;
@@ -125,15 +160,29 @@ function Profile() {
                     Pizza Party
                   </Card.Title>
                   <Card.Text>
-                    The{" "}
-                    <a href="https://adam-goodrich.github.io/pizza-party">
-                      Pizza Party
-                    </a>{" "}
-                    website is a single page app built using React and
-                    React-Router-Dom. The app is a fun and interactive and takes
-                    full advantage of the power of React and state management.
-                    The app is fully responsive built using the Bootstrap
-                    framework.
+                    The Pizza Party website is a single page app built using
+                    React and React-Router-Dom. The app is fun and interactive
+                    and takes full advantage of the power of React and state
+                    management. The app is fully responsive built using the
+                    Bootstrap framework.
+                  </Card.Text>
+                  <Card.Text>
+                    <a
+                      href="https://adam-goodrich.github.io/pizza-party"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="github-link">
+                      View Website
+                    </a>
+                  </Card.Text>
+                  <Card.Text>
+                    <a
+                      href="https://github.com/adam-goodrich/pizza-party"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="github-link">
+                      View On Github
+                    </a>
                   </Card.Text>
                   <Card.Text>
                     <Badge variant="secondary">JavaScript</Badge>&nbsp;

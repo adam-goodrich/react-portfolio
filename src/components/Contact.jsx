@@ -72,7 +72,7 @@ const Contact = () => {
                   <Form.Label className="form-label">Email:</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Your email address"
+                    placeholder="Your Email"
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
