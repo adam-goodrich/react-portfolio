@@ -18,6 +18,17 @@ body {
   align-items: center;
 }
 
+.contact-body {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  min-height: calc(100vh - 50px);
+  background-color: #131111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-content {
   padding: 0;
   margin: 0;
@@ -77,12 +88,43 @@ body {
   color: #ec4c4c !important;
 }
 
+.contact-card {
+  margin: 50px auto;
+  padding: 50px 50px;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+}
+
 .visable {
   display: block;
 }
 
+.sent-message {
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+}
+
 .invisible {
   display: none;
+}
+
+#submit-btn {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.card-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {

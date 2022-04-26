@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Card } from "react-bootstrap";
 import emailjs from "emailjs-com";
+import "animate.css/animate.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
-  const [nameValid, setNameValid] = useState(false);
-  const [emailValid, setEmailValid] = useState(false);
-  const [messageValid, setMessageValid] = useState(false);
   const [validated, setValidated] = useState(false);
 
-  const submit = () => {
-    // TODO - send mail
-
-    if (nameValid && emailValid && messageValid) {
-      setValidated(true);
-      setEmailSent(true);
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
+
+    setValidated(true);
 
     const serviceId = "service_ix1jruj";
     const templateId = "template_7sq8dfj";
@@ -29,7 +28,7 @@ const Contact = () => {
       message,
     };
 
-    if (validated) {
+    if (form.checkValidity() === true) {
       emailjs
         .send(serviceId, templateId, templateParams, userId)
         .then((response) => console.log(response))
@@ -42,54 +41,59 @@ const Contact = () => {
     }
   };
 
-  const isValidEmail = (email) => {
-    const regex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(String(email).toLowerCase());
-  };
-
   return (
     <div className="contact-body">
       <Container>
-        <Form id="contact-form" validated={validated}>
-          <Form.Group>
-            <Form.Label>Name:</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              id="validationCustom01"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Email:</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              id="validationCustom02"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Message:</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows="3"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              id="validationCustom03"
-            />
-          </Form.Group>
-          <Button onClick={submit}>Send Message</Button>
-          <span className={emailSent ? "visible" : "invisible"}>
-            Thank you for your message, we will be in touch in no time!
-          </span>
-        </Form>
+        <Card className="contact-card animate__animated animate__fadeIn">
+          <Card.Body>
+            <Card.Title className="card-title">Contact Me</Card.Title>
+            <Form
+              id="contact-form"
+              noValidate
+              validated={validated}
+              onSubmit={handleSubmit}>
+              <Form.Group controlId="validationCustom01">
+                <Form.Label className="form-label">Name:</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="validationCustom02">
+                <Form.Label className="form-label">Email:</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group controlId="validationCustom03">
+                <Form.Label className="form-label">Message:</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows="3"
+                  placeholder="Please send me a message!"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Button type="submit" id="submit-btn">
+                Send Message
+              </Button>
+              <div className={emailSent ? "visible sent-span" : "invisible"}>
+                <p className="sent-message">
+                  Thank you for your message, I will be in touch soon!
+                </p>
+              </div>
+            </Form>
+          </Card.Body>
+        </Card>
       </Container>
     </div>
   );
