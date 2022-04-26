@@ -14,20 +14,27 @@ function Home() {
     const options = {
       strings: [
         " ",
-        "Web Developer",
+        "Web \nDeveloper",
         "Collaborator",
+        "Creative \nThinker",
         `Experienced \nProfessional`,
-        `Take a look \naround`,
-        `Available for \nhire`,
       ],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
       cursorChar: "|",
+      startDelay: 300,
     };
 
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options);
+
+    const myHeadshot = document.querySelector(".headshot");
+    const typedContentContainer = document.querySelector(".typed-content");
+    setTimeout(() => {
+      myHeadshot.style.display = "block";
+      typedContentContainer.style.display = "block";
+    }, 300);
 
     return () => {
       // Make sure to destroy Typed instance during cleanup
@@ -46,14 +53,18 @@ function Home() {
               roundedCircle={true}
               src={Headshot}
               alt="my headshot"
-              className="headshot animate__animated animate__fadeIn"
+              className="headshot animate__animated animate__fadeInLeft "
+              style={{ display: "none" }}
             />
           </Col>
           <Col id="greeting">
-            <h1 className="name animate__animated animate__fadeInDown">
+            <h1 className="name animate__animated animate__fadeInDown animate__delay-1s">
               Adam Goodrich
             </h1>
-            <h1 className="typed-content">
+
+            <h1
+              className="typed-content animate__animated animate__fadeInUp"
+              style={{ display: "none" }}>
               <span
                 style={{ whiteSpace: "pre" }}
                 ref={el}

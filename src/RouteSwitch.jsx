@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import MyNav from "./components/Navbar";
+import Contact from "./components/Contact";
 
 const RouteSwitch = () => {
   return (
@@ -12,6 +13,7 @@ const RouteSwitch = () => {
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </HashRouter>
   );
