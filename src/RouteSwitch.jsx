@@ -12,7 +12,7 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/work" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </HashRouter>

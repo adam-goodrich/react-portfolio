@@ -35,7 +35,7 @@ function MyNav() {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="#/profile" className="nav-links">
+                <Nav.Link href="#/work" className="nav-links">
                   <FontAwesomeIcon icon={faBriefcase} />
                   &nbsp;&nbsp;My Work
                 </Nav.Link>

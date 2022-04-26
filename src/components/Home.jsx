@@ -53,7 +53,7 @@ function Home() {
               fluid={true}
               src={Headshot}
               alt="my headshot"
-              className="headshot animate__animated animate__fadeInLeft "
+              className="headshot animate__animated animate__fadeIn"
               style={{ display: "none" }}
             />
           </Col>
