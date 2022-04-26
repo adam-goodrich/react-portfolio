@@ -7,11 +7,7 @@ import dog from "../images/dog.png";
 import "animate.css/animate.min.css";
 import { Container, Row, Col, Image, Card, Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHand,
-  faHandPointDown,
-  faHandPointUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHand, faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 
 function Profile() {
   return (
