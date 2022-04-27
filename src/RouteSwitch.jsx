@@ -4,10 +4,12 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import MyNav from "./components/Navbar";
 import Contact from "./components/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 const RouteSwitch = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <MyNav />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home" />} />

@@ -16,7 +16,8 @@ function MyNav() {
         expand="lg"
         variant="dark"
         bg="dark"
-        className="navbar">
+        className="navbar"
+        collapseOnSelect>
         <Container>
           <Navbar.Brand>
             <span style={{ color: "#ec4c4c" }}>
