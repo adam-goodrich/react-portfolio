@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -322,16 +323,12 @@ body {
     height: 100%;
     width: 92%;
     max-width: 800px;
-    border: 2px solid #272525;
-    box-shadow: 5px 5px #696868;
   }
 
   .project-image {
     width: 350px;
     height: 100%;
     object-fit: cover;
-    border: 2px solid #272525;
-    box-shadow: 5px 5px #696868;
   }
 
   .profile-content {
