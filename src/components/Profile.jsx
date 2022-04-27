@@ -35,7 +35,7 @@ function Profile() {
                 <span style={{ color: "#ec4c4c" }}>original</span> websites and
                 applications.
               </p>
-              <p className="center-text">
+              <p className="center-text" style={{ marginBottom: "50px" }}>
                 Please take a look at my{" "}
                 <span style={{ color: "#ec4c4c" }}>work below</span> or feel
                 free to get in touch with me via the contact form on the site.

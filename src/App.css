@@ -358,11 +358,14 @@ body {
   }
 
   .profile-content-1 h1 {
-    font-size: 2em;
+    font-size: 2.3em;
+    margin-bottom: 80px;
   }
 
   .profile-content-1 p {
-    font-size: 1em;
+    font-size: 1.2em;
+    max-width: 90%;
+    margin: 15px auto;
   }
 
   .mobile-hidden {
