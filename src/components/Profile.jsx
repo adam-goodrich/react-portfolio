@@ -289,12 +289,14 @@ function Profile() {
         <Row className="home-content-last">
           <Col className="project-container">
             <div data-aos="fade-right">
-              <h1 className="center-text">Please contact me.</h1>
+              <h1 className="center-text">
+                Contact <br className="mobile-break"></br>me.
+              </h1>
             </div>
           </Col>
           <Col className="project-container">
             <div data-aos="fade-left">
-              <h1 className="center-text">Let's work together!</h1>
+              <h1 className="center-text">Let's build something!</h1>
             </div>
           </Col>
         </Row>

@@ -3,9 +3,17 @@
   -webkit-overflow-scrolling: touch;
 }
 
-body {
-  height: 100vh;
+html {
+  min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   transform: translate3d(0, 0, 0);
 }
 
