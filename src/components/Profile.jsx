@@ -15,13 +15,14 @@ function Profile() {
       <Container className="profile-container">
         <Row className="profile-content-1">
           <Col className="hello-container">
-            <div data-aos="fade-down ">
+            <div data-aos="fade-down">
               <h1 className="center-text">
                 <FontAwesomeIcon
                   icon={faHand}
                   className="animate__animated animate__wobble"
                 />
-                &nbsp;&nbsp;&nbsp;Hello, Thanks for visiting.
+                &nbsp;&nbsp;&nbsp;Hello<span className="mobile-hidden">,</span>{" "}
+                <br className="mobile-break"></br>Thanks for visiting.
               </h1>
               <p className="center-text">
                 I am a <span style={{ color: "#ec4c4c" }}>Web Developer</span>{" "}

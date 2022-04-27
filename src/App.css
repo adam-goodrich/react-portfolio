@@ -286,6 +286,10 @@ body {
   left: 430px;
 }
 
+.mobile-break {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .headshot {
     max-width: 23rem;
@@ -353,8 +357,28 @@ body {
     font-size: 1.7em;
   }
 
+  .profile-content-1 h1 {
+    font-size: 2em;
+  }
+
+  .profile-content-1 p {
+    font-size: 1em;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .hand-container {
+    margin-top: 50px;
+  }
+
   .headshot {
     margin-top: 50px;
     max-width: 15rem;
+  }
+
+  .mobile-break {
+    display: inline-block;
   }
 }
