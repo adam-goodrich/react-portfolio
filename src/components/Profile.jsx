@@ -5,7 +5,15 @@ import pizza from "../images/pizza.png";
 import boomerang from "../images/boomerang.png";
 import dog from "../images/dog.png";
 import "animate.css/animate.min.css";
-import { Container, Row, Col, Image, Card, Badge } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Card,
+  Badge,
+  Button,
+} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHand, faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -286,7 +294,7 @@ function Profile() {
             </div>
           </Col>
         </Row>
-        <Row className="home-content-last">
+        <Row className="home-content">
           <Col className="project-container">
             <div data-aos="fade-right">
               <h1 className="center-text">
@@ -300,6 +308,15 @@ function Profile() {
             </div>
           </Col>
         </Row>
+        <div className="home-content-last">
+          <Button
+            className="back-to-top-btn"
+            onClick={() => {
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }, 0);
+            }}>Back to top</Button>
+        </div>
       </Container>
     </div>
   );
