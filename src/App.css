@@ -383,6 +383,14 @@ body {
     margin: 15px auto;
   }
 
+  .contact-body {
+    align-items: flex-start;
+  }
+
+  .contact-card {
+    margin: 50px auto;
+  }
+
   .hello-container {
     align-items: flex-start;
   }
