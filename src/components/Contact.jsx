@@ -19,7 +19,7 @@ const Contact = () => {
 
     setValidated(true);
 
-    const serviceId = "service_ix1jruj";
+    const serviceId = "service_sam12bj";
     const templateId = "template_7sq8dfj";
     const userId = "6YEakNTL9hYSbIkxL";
     const templateParams = {
